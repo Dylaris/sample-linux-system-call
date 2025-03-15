@@ -10,7 +10,7 @@ typedef struct alarm_tag {
     char message[64];
 } alarm_t;
 
-void *alarm_thread(void *arg)
+static void *alarm_thread(void *arg)
 {
     alarm_t *alarm = (alarm_t *) arg;
     int status = pthread_detach(pthread_self());
