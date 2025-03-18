@@ -5,7 +5,7 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-gcc -std=c99 -Wall -Wextra "$1" -I./
+gcc -g -std=c99 -Wall -Wextra "$1" -I./
 
 if  [ $? -ne 0 ]; then
     echo "Compilation failed!"
